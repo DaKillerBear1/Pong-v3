@@ -54,6 +54,10 @@ function trueDegrees(val)
   return newVal
 end
 
+function LMBIsDown()
+  return love.mouse.isDown(1)
+end
+
 function debugLoad() -- For debugging/testing purposes only
   createPaddle("p1", 10, (screenHeight / 2) - 50)
   
