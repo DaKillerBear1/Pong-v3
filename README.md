@@ -1,4 +1,7 @@
 # Pong-v3
+
+<b> THIS GAME REQUIRES THE LATEST LÖVE2D ENGINE, IT CAN BE FOUND AT: https://love2d.org/ </b>
+
 A basic Pong-clone used to practice my programming, help and ideas are appriciated!
 
 This game is for educational purposes, I shall use this game to practice my programming.
