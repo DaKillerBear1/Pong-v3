@@ -7,7 +7,7 @@ Ball = {
   dy = 0,
   width = 20,
   height = 20,
-  moveSpeed = 600,
+  moveSpeed = 1000,
   colour = {255, 255, 255},
   
   new = function(self)
@@ -59,7 +59,7 @@ function updtBalls(dt)
       ball.dy = -ball.dy
     end
     if ball.x <= 0 or ball.x + ball.width >= screenWidth then
-      --love.event.quit()
+      love.event.quit()
       ball.dx = -ball.dx
     end
   end
