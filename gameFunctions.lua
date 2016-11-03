@@ -1,3 +1,8 @@
+ function loadVar() -- Loads the required global variables
+    graphics = love.graphics
+    screenWidth, screenHeight = graphics.getDimensions()
+  end
+
 function calcReturnAngle(val, minAngle, maxAngle, paddleLength)
   -- Calculates and returns the return angle for the ball depending on
   -- where it strikes on the paddle
@@ -54,6 +59,10 @@ function trueDegrees(val)
   return newVal
 end
 
+function LMBIsDown()
+  return love.mouse.isDown(1)
+end
+
 function debugLoad() -- For debugging/testing purposes only
   createPaddle("p1", 10, (screenHeight / 2) - 50)
   
@@ -64,4 +73,6 @@ function debugLoad() -- For debugging/testing purposes only
   createBall("b1", (screenWidth / 2) - 10, (screenHeight / 2) - 10)
   balls.b1.dx = math.cos(math.rad(trueDegrees(270))) * Ball.moveSpeed
   balls.b1.dy =  math.sin(math.rad(trueDegrees(270))) * Ball.moveSpeed
+  
+  createButton("testbutton" ,50, 50, 100, 50, "Test", function() print("Test") end)
 end
